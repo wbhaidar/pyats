@@ -1,0 +1,27 @@
+testbed:
+  name: CML Test Topology
+  credentials:
+    default:
+      password: cisco
+      username: cisco
+    enable:
+      password: cisco
+
+devices:
+  rtr1:
+    connections:
+      cli:
+        ip: 10.88.6.239
+        protocol: ssh
+        command: "ssh -v 10.88.6.239 -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null"
+    os: ios
+    type: ios
+    custom:
+      version: "15.9"
+
+topology:
+  rtr1:
+    interfaces:
+      Loopback0:
+        ipv4: 1.1.1.1/32
+        type: loopback
