@@ -13,7 +13,7 @@ devices:
       cli:
         ip: 10.88.6.239
         protocol: ssh
-        command: "ssh -v 10.88.6.239 -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null"
+        command: "ssh -v 10.88.6.239 -o HostKeyAlgorithms=+ssh-rsa -o KexAlgorithms=+diffie-hellman-group14-sha1 -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null"
     os: ios
     type: ios
     custom:
