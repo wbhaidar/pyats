@@ -127,7 +127,7 @@ class CHECK_VER(aetest.Testcase):
         parsed_v2 = Dq(parsed_v1).get_values('version_short')
         parsed_v3 = parsed_v2[0]
 
-        logger.warning('param2: %s' % param2)
+        #logger.warning('param2: %s' % param2)
         if not parsed_v3 == device.custom.version:
             self.failed(f"{device.name} is not running {device.custom.version}, but {parsed_v3}",)
         else :
@@ -138,7 +138,7 @@ class CHECK_VER(aetest.Testcase):
 #        v_installed=parsed_version['version_short']
 
 #        logger.warning('param: %s' % param1)
-        logger.warning('param2: %s' % param2)
+      ##  logger.warning('param2: %s' % param2)
 #        logger.warning('ver_installed: %s' %parsed_version)
 #        logger.warning('v_installed: %s' %v_installed)
 #        logger.warning('ver_required: %s' %device.custom.ver)
