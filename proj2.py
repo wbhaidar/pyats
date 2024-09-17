@@ -55,21 +55,21 @@ class CommonSetup(aetest.CommonSetup):
 
  # Get specified testbed
 
-#        genie_testbed = Genie.init(testbed)
+        genie_testbed = Genie.init(testbed)
       # Save in environment variables
-#        self.parent.parameters['testbed'] = genie_testbed
-#        device_list = []
+        self.parent.parameters['testbed'] = genie_testbed
+        device_list = []
         # Try connect one by one and save device objects in a list
-#        for device in genie_testbed.devices.values():
-#            logger.info(banner( "Connect to device '{d}'".format(d=device.name)))
-#            try:
-#                    device.connect(init_exec_commands=[], init_config_commands=[], log_stdout=False)
-#            except Exception as e:
-#                   self.failed("Failed to establish connection to '{}'".format(device.name))
-#            device_list.append(device)
+        for device in genie_testbed.devices.values():
+            logger.info(banner( "Connect to device '{d}'".format(d=device.name)))
+            try:
+                    device.connect(init_exec_commands=[], init_config_commands=[], log_stdout=False)
+            except Exception as e:
+                   self.failed("Failed to establish connection to '{}'".format(device.name))
+            device_list.append(device)
 #
-#        self.parent.parameters.update(dev=device_list)
-#        print('device list {}'.format(device_list))
+        self.parent.parameters.update(dev=device_list)
+        print('device list {}'.format(device_list))
 
     @aetest.subsection
     def print(self, testbed):
@@ -91,7 +91,7 @@ class verify_connected(aetest.Testcase):
     def test(self, testbed, steps):
         # Loop over every device in the testbed
         for device_name, device in testbed.devices.items():
-            logger.warn(f"device_name is {device_name} and device is {device}")
+            logger.warning(f"device_name is {device_name} and device is {device}")
             with steps.start(
                 f"Test Connection Status of {device_name}", continue_=True
             ) as step:
