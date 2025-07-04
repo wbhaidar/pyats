@@ -1,5 +1,5 @@
 testbed:
-  name: CML Test Topology
+  name: GNS3 Test Topology
   credentials:
     default:
       password: cisco
@@ -11,9 +11,9 @@ devices:
   rtr1:
     connections:
       cli:
-        ip: 10.88.6.239
+        ip: 192.168.99.1
         protocol: ssh
-        command: "ssh -v 10.88.6.239 -o HostKeyAlgorithms=+ssh-rsa -o KexAlgorithms=+diffie-hellman-group14-sha1 -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null"
+        command: "ssh -v 192.168.99.1 -o HostKeyAlgorithms=+ssh-rsa -o KexAlgorithms=+diffie-hellman-group14-sha1 -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null"
     os: ios
     type: ios
     custom:

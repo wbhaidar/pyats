@@ -1,0 +1,48 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Test results and logs
+*.log
+*.txt
+logs/
+output/
+archive/
+*.xml
+*.html
+
+# pyATS runtime directories
+job_results/
+job_logs/
+job_data/
+__autosave__
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+
+# Jupyter/IPython
+.ipynb_checkpoints
+
+# macOS
+.DS_Store
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# YAML secrets or backups
+*.bak
+*.orig
+*.swp
+
+# Misc
+*.pkl
+*.db
+*.tar.gz
+*.zip
